@@ -7,8 +7,10 @@
 ## Specifications
 #
 
+* [Fullstack Engineer Challenge (pdf)](documentation/specification/Fullstack%20Engineer%20Challenge%202.0.pdf)
 * Readme, Docker, Backend, Frontend
 
+#
 ##### Assumptions to clarify
 1. server specification for simple memory store, no db, **assuming no WSGI/NGINX/multi-process for API**
 2. server specification describes updating the state, but not the encoded file, **verify this conclusion?**
@@ -35,3 +37,7 @@
 
 ##### Security
 1. CORS and similar should be discussed in terms of security
+
+
+# Running
+`docker-compose up`
