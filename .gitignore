@@ -1,4 +1,6 @@
+.idea
 venv
 *.egg-info
 __pychache__
 node_packages
+package-lock.json
