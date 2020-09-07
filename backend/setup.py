@@ -1,10 +1,11 @@
 from setuptools import setup
-from . import version
+
 
 setup(
-    name=version.NAME,
-    version=version.VERSION,
-    packages=[],
+    name="backend",
+    version="0.0.2",
+    package_dir={"backend": "src"},
+    packages=["backend"],
     url='',
     license='',
     author='ZacharyACoon',
