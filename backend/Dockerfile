@@ -1,4 +1,5 @@
 FROM python:3.8-slim
+
 COPY . /backend
 RUN pip install /backend
 
@@ -8,4 +9,4 @@ ENV ENCODED_DATA_FILE /data/encoded_data.json
 
 
 VOLUME ["/data"]
-ENTRYPOINT python -m backend ${ENCODED_DATA_FILE} ${PORT}
+CMD python -m backend ${ENCODED_DATA_FILE} ${PORT}
