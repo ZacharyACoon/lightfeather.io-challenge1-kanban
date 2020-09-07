@@ -18,11 +18,9 @@
 5. figma mock looks well proportioned / centered, **does the client want it single column or full page?**
 6. there's an unspecified border radius on the task cards in the mock up, **assuming something that looks similar**
 7. the specified lane width of 388px doesn't allow for common half screen **following spec**
+8. header 4px bottom border looks like it might be a margin?
 #
 #
-
-##### Confusion
-1. Figma mock describes a "4px border" at the bottom of the header, but it looks like a margin?
 
 ---
 #
@@ -34,3 +32,6 @@
 * Python Backend (~~nginx WSGI load balancing~~ (would require db/memstore)
 * React Frontend
 * Nginx load balance / reverse proxy?
+
+##### Security
+1. CORS and similar should be discussed in terms of security
