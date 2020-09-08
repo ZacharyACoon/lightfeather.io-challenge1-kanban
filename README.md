@@ -24,7 +24,8 @@
 
 * Python Backend (~~nginx WSGI load balancing~~ (would require db/memstore)
 * React Frontend
-* Nginx load balance / reverse proxy?
+* ~~Nginx load balance / reverse proxy?~~
+* I like https://github.com/bevacqua/react-dragula for drag and drop elements..
 
 ##### Security
 1. CORS should probably be refined to allowed host headers
