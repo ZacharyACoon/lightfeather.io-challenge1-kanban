@@ -1,5 +1,5 @@
 from . import configuration
-from flask import Flask, jsonify
+from flask import Flask, jsonify, request
 from flask_cors import CORS
 
 # maps tasks by uuid, for later updating
@@ -20,7 +20,9 @@ def api_kanban_get():
 @app.route("/api/kanban", methods=["POST"])
 def api_kanban_post():
     # update a single task
-    return 501
+    task = request.json
+    tasks[task["uuid"]] = task
+    return "", 200
 
 
 if __name__ == "__main__":
