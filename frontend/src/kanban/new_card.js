@@ -19,7 +19,7 @@ const useStyles = makeStyles({
         textDecoration: "none",
         color: "inherit",
 
-        "&:focus": {
+        "&:focus-within": {
           border: "4px solid red",
         },
 
@@ -29,14 +29,29 @@ const useStyles = makeStyles({
             padding: "0 30px",
             overflow: "hidden",
             textOverflow: "ellipsis",
+
+            "& > textarea": {
+                width: "100%",
+                height: "100%",
+                outline: "none",
+                border: "none",
+                resize: "none",
+            },
         },
 
         "& > .meta": {
             display: "flex",
             justifyContent: "space-between",
+            alignItems: "center",
             padding: 10,
             paddingBottom: 0,
-            flexGrow: 1,
+
+            "& > .done": {
+                backgroundColor: "#0166fe",
+                color: "white",
+                padding: "5px 10px",
+                borderRadius: 5,
+            },
         },
 
         "& > .left, > .right": {
@@ -60,25 +75,19 @@ const useStyles = makeStyles({
     }
 });
 
-Card.defaultProps = {
-    task: {author: undefined, date: undefined, description: undefined, uuid: undefined},
-    left_callback: null,
-    right_callback: null,
+NewCard.defaultProps = {
+
 };
 
-export default function Card(props) {
+export default function NewCard(props) {
     let styles = useStyles();
-    let { task } = props;
-    let dt = new Date(Date.parse(task.date));
 
     return (
         <a href="#" className={clsx("card", styles.root)}>
-            {props.left_callback && <div className={"left"} onClick={props.left_callback}><div className="symbol">＜</div></div>}
-            {props.right_callback && <div className={"right"} onClick={props.right_callback}><div className="symbol">＞</div></div>}
-            <div className={"description"}>{task.description}</div>
+            <div className={"description"}><textarea placeholder="description..."/></div>
             <div className={"meta"}>
-                <div className={"date"}>{dt.toLocaleDateString()}</div>
-                <div className={"author"}>{task.author}</div>
+                <div>Creating...</div>
+                <div className={"done"}>Done</div>
             </div>
         </a>
     );

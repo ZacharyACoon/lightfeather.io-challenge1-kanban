@@ -1,6 +1,7 @@
 import React, {useEffect, useState} from "react";
 import { makeStyles } from "@material-ui/styles";
 import Lane from "./lane";
+import NewCard from "./new_card";
 
 
 const useStyles = makeStyles({
@@ -28,9 +29,9 @@ const useStyles = makeStyles({
             justifyContent: "center",
 
             "& > .lane": {
-                "&:nth-child(1) > *": { backgroundColor: "grey", },
-                "&:nth-child(2) > *": { backgroundColor: "blue", },
-                "&:nth-child(3) > *": { backgroundColor: "green", },
+                "&:nth-child(1) > *": { backgroundColor: "#adadad", },
+                "&:nth-child(2) > *": { backgroundColor: "#0166fe", },
+                "&:nth-child(3) > *": { backgroundColor: "#017a24", },
                 "&:not(:first-child)": { marginLeft: 80, },
             },
         },
@@ -59,7 +60,7 @@ export default function KanBan(props) {
             });
     }, []);
 
-    function changeStatus(task, new_status) {
+    function change_task_status(task, new_status) {
         task.status = new_status;
 
         fetch(url, {
@@ -79,17 +80,19 @@ export default function KanBan(props) {
                 <Lane
                     name="Backlog"
                     tasks={Object.values(tasks).filter(t => t.status === "backlog")}
-                    right_callback={(task) => changeStatus(task, "in_progress")}
-                />
+                    right_callback={(task) => change_task_status(task, "in_progress")}
+                >
+                    <NewCard/>
+                </Lane>
                 <Lane
                     name="In Progress"
                     tasks={Object.values(tasks).filter(t => t.status === "in_progress")}
-                    left_callback={(task) => changeStatus(task, "backlog")}
-                    right_callback={(task) => changeStatus(task, "completed")}
+                    left_callback={(task) => change_task_status(task, "backlog")}
+                    right_callback={(task) => change_task_status(task, "completed")}
                 />
                 <Lane
                     name="Completed" tasks={Object.values(tasks).filter(t => t.status === "completed")}
-                    left_callback={(task) => changeStatus(task, "in_progress")}
+                    left_callback={(task) => change_task_status(task, "in_progress")}
                 />
             </div>
         </div>

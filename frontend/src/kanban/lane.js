@@ -92,6 +92,7 @@ export default function Lane(props) {
                         left_callback={props.left_callback ? () => props.left_callback(t) : undefined}
                         right_callback={props.right_callback ? () => props.right_callback(t) : undefined}
                     />)}
+                    {props.children}
                 </div>
             </div>
         </div>
