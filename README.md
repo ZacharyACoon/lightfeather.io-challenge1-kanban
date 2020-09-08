@@ -1,11 +1,8 @@
 # LightFeather.io - Full Stack Kanban Challenge
-#
-#
 
 ---
-#
+
 ## Specifications
-#
 
 * [Fullstack Engineer Challenge (pdf)](documentation/specification/Fullstack%20Engineer%20Challenge%202.0.pdf)
 * Readme, Docker, Backend, Frontend
@@ -25,9 +22,8 @@
 #
 
 ---
-#
+
 ## Design
-#
 
 ##### Initial Thoughts
 
