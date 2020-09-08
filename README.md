@@ -36,8 +36,24 @@
 * Nginx load balance / reverse proxy?
 
 ##### Security
-1. CORS and similar should be discussed in terms of security
-
+1. CORS should probably be refined to allowed host headers
+2. API would eventually implement user input verification and rate limiting
 
 # Running
-`docker-compose up`
+```shell script
+docker-compose up
+```
+
+# Screenshots
+
+Docker Compose Up
+
+![](documentation/screenshots/docker-compose_up.png)
+
+Backend Get Request
+
+![](documentation/screenshots/backend_GET.png)
+
+Frontend
+
+![](documentation/screenshots/frontend.png)
