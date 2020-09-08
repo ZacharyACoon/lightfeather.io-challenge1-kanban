@@ -35,6 +35,8 @@
 docker-compose up
 ```
 
+http://localhost
+
 # Screenshots
 
 Docker Compose Up
