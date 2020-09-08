@@ -1,7 +1,5 @@
 # LightFeather.io - Full Stack Kanban Challenge
 
----
-
 ## Specifications
 
 * [Fullstack Engineer Challenge (pdf)](documentation/specification/Fullstack%20Engineer%20Challenge%202.0.pdf)
@@ -20,8 +18,6 @@
 8. header 4px bottom border looks like it might be a margin?
 #
 #
-
----
 
 ## Design
 
