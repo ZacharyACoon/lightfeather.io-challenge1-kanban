@@ -1,0 +1,20 @@
+---
+version: "3.7"
+
+services:
+  backend:
+    build: ./backend
+    environment:
+      PORT: "23456"
+      ENCODED_DATA_FILE: "/data/encoded_data.json"
+    ports:
+      - 23456:23456
+    volumes:
+      - ./documentation/specification/encoded_data.json:/data/encoded_data.json:ro
+
+  frontend:
+    build: ./frontend
+    environment:
+      PORT: "80"
+    ports:
+      - 80:80
