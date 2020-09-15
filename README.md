@@ -51,3 +51,11 @@ Backend Get Request
 Frontend
 
 ![](documentation/screenshots/frontend.png)
+
+# Afterthoughts and Improvements
+
+I feel I could:
+
+* have used a simpler nodejs stack that would interact more seamlessly with React.
+* improve my callback usage in the frontend.
+* better understand how testing is implemented in these sorts of applications, rather than just simple unit testing.
